@@ -1,0 +1,59 @@
+<% layout("/layouts/bilopret") -%>
+<div class="row">
+    <div class="col-8 offset-2">
+        <h4>Edit Your Post</h4>
+        <form method="POST" action="/listings/<%= lists._id %>?_method=PUT" class="needs-validation" novalidate enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="title" class="form-label">Title</label>
+                <input name="lists[title]" value="<%= lists.title %>" class="form-control" placeholder="Enter your title" type="text" required>
+                <div class="invalid-feedback">Please enter a title.</div>
+            </div>
+            <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <textarea name="lists[description]" class="form-control" required><%= lists.description %></textarea>
+                <div class="invalid-feedback">Please enter a description.</div>
+            </div>
+            <div class="mb-3">
+                original image<br><br>
+                <img src="<%= originalUrl %>"/>
+            </div>
+            <div class="mb-3">
+                <label for="image" class="form-label"> new Image</label>
+                <input name="lists[image]" type="file" class="form-control" placeholder="Enter an image">
+            </div>
+            <div class="row">
+                <div class="mb-2 col-md-4">
+                    <label for="price" class="form-label">Price</label>
+                    <input name="lists[price]" value="<%= lists.price %>" class="form-control" placeholder="Enter your Price" type="number" required>
+                    <div class="invalid-feedback">Please enter a valid price.</div>
+                </div>
+                <div class="mb-2 col-md-8">
+                    <label for="country" class="form-label">Country</label>
+                    <input name="lists[country]" value="<%= lists.country %>" class="form-control" placeholder="Enter your Country" required>
+                    <div class="invalid-feedback">Please enter a country.</div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="location" class="form-label">Location</label>
+                <input name="lists[location]" value="<%= lists.location %>" class="form-control" placeholder="Enter your location" required>
+                <div class="invalid-feedback">Please enter a location.</div>
+            </div>
+            <br>
+            <div class="mb-3">
+                <label for="category" class="form-label">Category</label>
+                <select name="lists[category]" class="form-control" required>
+                    <option value="" disabled>Select a category</option>
+                    <option value="Trending" <% if (lists.category === 'Trending') { %> selected <% } %>>Trending</option>
+                    <option value="Top cities" <% if (lists.category === 'Top cities') { %> selected <% } %>>Top cities</option>
+                    <option value="Design" <% if (lists.category === 'Design') { %> selected <% } %>>Design</option>
+                    <option value="Swimming pools" <% if (lists.category === 'Swimming pools') { %> selected <% } %>>Swimming pools</option>
+                    <option value="Tree Houses" <% if (lists.category === 'Tree Houses') { %> selected <% } %>>Tree Houses</option>
+                    <option value="Cabins" <% if (lists.category === 'Cabins') { %> selected <% } %>>Cabins</option>
+                    <option value="New" <% if (lists.category === 'New') { %> selected <% } %>>New</option>
+                </select>
+                <div class="invalid-feedback">Please select a category.</div>
+            </div>
+            <button class="btn btn-sm btn-danger">Edit</button>
+        </form>
+    </div>
+</div>

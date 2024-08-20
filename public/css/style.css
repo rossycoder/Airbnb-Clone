@@ -1,0 +1,155 @@
+body {
+    font-family: "Figtree", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.navbar{
+    height: 5rem;
+    background-color: white;
+}
+.fa-compass{
+    color: #fe424d;
+    font-size: 2rem;
+}
+.nav-link{
+    color: black !important;
+}
+.container {
+    flex: 1;
+}
+
+footer {
+    text-align: center;
+    height: 8rem;
+    background-color: #ebebeb;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+    margin-top: auto;
+}
+.f-info-link a{
+    text-decoration: none;
+    color: black;
+}
+/* .f-info-link a:hover{
+    text-decoration: underline;
+} */
+.f-info-link{
+    width: 100%;
+}
+.f-info-socials{
+    width: 100%;
+    font-size: 1.2rem;
+    
+}
+.f-info-socials i{
+    margin-right: 1.2rem;
+
+}
+
+.f-info{
+    text-align: center;
+    height: 8rem;
+    background-color: #ebebeb;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+}
+.list-card{
+    border: none !important;
+    margin-bottom: 3rem !important;
+}
+/* Example CSS that could affect element behavior */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Ensure no unintended click handling */
+  }
+  
+
+.card-img-top{
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+.card-body{
+    padding: 0 !important;
+}
+.card-text p{
+    font-weight: 400 !important;
+}
+.listing-link{
+    text-decoration: none;
+    color: black;
+}
+/* Card-effect */
+.card-img-overlay{
+    opacity: 0;
+    pointer-events: none; 
+
+}
+
+/* .row{
+    margin-left: 5rem !important; 
+} */
+ .show-img{
+    height: 30vh !important;
+ }
+ .btns{
+    display: flex;
+ }
+ .show-card{
+    padding-left: 0;
+    padding-right: 0;
+ }
+ #map { 
+    
+    height: 400px;
+    width: 80vh;
+ }
+ /* filters */
+ #filters{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+ }
+ .filter{
+    text-align: center;
+    margin-right: 2rem;
+    margin-left: 1.2rem;
+    margin-top:2rem;
+    opacity: 0.7;
+ }
+ .filter:hover{
+    opacity: 1;
+    cursor: pointer;
+ }
+ .filter p{
+    font-size: 0.8rem;
+ }
+ .tax-info{
+    display: none;
+ }
+ .tax-toggle{
+    border: 1px solid black;
+    border-radius: 1rem;
+    height: 3.5rem;
+    padding: 1rem;
+    margin-left: 10rem;
+    display: flex;
+
+    align-items: center;
+ }
+ .show-card {
+    border: none !important;
+}
